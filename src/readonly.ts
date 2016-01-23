@@ -21,3 +21,4 @@ function readonly(target, key:string):any {
 
 	return { get, set };
 }
+
