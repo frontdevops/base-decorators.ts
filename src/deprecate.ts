@@ -12,7 +12,7 @@ function deprecate(target:any, key:string, descriptor? :any) {
 	if (descriptor === undefined)
 		throw new SyntaxError('Only methods can be marked as deprecated!');
 
-	let cls = `${target.constructor.name}`;
+	let cls = target.constructor.name;
 	let originalMethod = descriptor.value;
 
 	descriptor.value = function deprecate() {
